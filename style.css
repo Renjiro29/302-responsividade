@@ -1,0 +1,55 @@
+body{
+    margin: 0;
+    display: grid;
+    grid-template-areas: 'nav nav nav nav'
+                         'header header header header'
+                         'section section section section'
+                         'footer footer footer footer';
+    grid-template-rows: 20vh 30vh 60vh 40vh;
+}
+
+nav{
+    grid-area: nav;
+    background-color: blue;
+}
+
+header{
+    grid-area: header;
+    background-color: blueviolet;
+}
+
+section{
+    grid-area: section;
+    background-color: chartreuse;
+}
+footer{
+    grid-area: footer;
+    background-color: darkgreen;
+}
+
+@media(min-width: 1024px){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                             'header header section section'
+                             'header header section section'
+                             'footer footer footer footer';
+    }
+}
+@media(min-width:560px){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                             'header header header section'
+                             'header header header section'
+                             'footer footer footer section';
+    }
+}
+
+@media(min-width:350px){
+    body{
+        grid-template-areas: 'nav nav nav nav'
+                             'header header header header'
+                             'section section section section'
+                             'footer footer footer footer';
+    }
+}
+
